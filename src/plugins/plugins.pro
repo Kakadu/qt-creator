@@ -9,34 +9,24 @@ SUBDIRS   = \
     coreplugin \
     texteditor \
     cppeditor \
-    bineditor \
     diffeditor \
     imageviewer \
     bookmarks \
     projectexplorer \
     vcsbase \
-    perforce \
-    subversion \
     git \
-    cvs \
     cpptools \
     qtsupport \
     qmakeprojectmanager \
     debugger \
     cpaster \
     cmakeprojectmanager \
-    autotoolsprojectmanager \
     fakevim \
-    emacskeys \
     resourceeditor \
     genericprojectmanager \
     qmljseditor \
     qmlprojectmanager \
     glsleditor \
-    pythoneditor \
-    nim \
-    mercurial \
-    bazaar \
     classview \
     tasklist \
     qmljstools \
@@ -46,12 +36,9 @@ SUBDIRS   = \
     valgrind \
     todo \
     qnx \
-    clearcase \
     baremetal \
-    ios \
     beautifier \
     modeleditor \
-    winrt \
     updateinfo \
     scxmleditor \
     welcome \
@@ -84,6 +71,8 @@ qtHaveModule(designercomponents_private) {
 } else {
     warning("Qt Widget Designer plugin has been disabled since the Qt Designer module is not available.")
 }
+
+SUBDIRS -= qmlprofiler designer
 
 DO_NOT_BUILD_QMLDESIGNER = $$(DO_NOT_BUILD_QMLDESIGNER)
 isEmpty(DO_NOT_BUILD_QMLDESIGNER):qtHaveModule(quick-private) {
