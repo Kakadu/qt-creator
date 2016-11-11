@@ -9,16 +9,12 @@ SUBDIRS   = \
     coreplugin \
     texteditor \
     cppeditor \
-    bineditor \
     diffeditor \
     imageviewer \
     bookmarks \
     projectexplorer \
     vcsbase \
-    perforce \
-    subversion \
     git \
-    cvs \
     cpptools \
     qtsupport \
     qmakeprojectmanager \
@@ -26,19 +22,13 @@ SUBDIRS   = \
     help \
     cpaster \
     cmakeprojectmanager \
-    autotoolsprojectmanager \
     fakevim \
-    emacskeys \
     designer \
     resourceeditor \
     genericprojectmanager \
     qmljseditor \
     qmlprojectmanager \
     glsleditor \
-    pythoneditor \
-    nim \
-    mercurial \
-    bazaar \
     classview \
     tasklist \
     qmljstools \
@@ -48,13 +38,10 @@ SUBDIRS   = \
     valgrind \
     todo \
     qnx \
-    clearcase \
     baremetal \
-    ios \
     beautifier \
     modeleditor \
     qmakeandroidsupport \
-    winrt \
     qmlprofiler \
     updateinfo \
     scxmleditor \
