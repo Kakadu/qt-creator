@@ -1,0 +1,40 @@
+opam-version: "2.0"
+name: "qtcreator"
+version: "v4.2.0-beta1"
+synopsis: "Qt Creator IDE"
+maintainer: "kakadu <kakadu.hafanana@gmail.com>"
+authors: "Qt Project team"
+license: "GPL3 with QtCompany GPL Exception 1.0"
+homepage: "TODO"
+bug-reports: "TODO"
+depends: ["conf-qt"]
+build: [
+  ["qmake" "-r" "qtcreator.pro"]
+  [make "-j5"]
+]
+install: [
+  [make "install" "INSTALL_ROOT=%{prefix}%"]
+  ["sh" "-c" "OPAMSHARE=%{share}% ./files/dev-headers.sh"]
+]
+remove: [
+  ["rm" "-f"  "%{bin}%/qtcreator"]
+  ["rm" "-fr" "%{lib}%/qtcreator"]
+  ["rm" "-fr" "%{share}%/qtcreator"]
+  ["rm" "-fr" "%{prefix}%/libexec/qtcreator"]
+  ["rm" "-fr" "%{share}%/qtcreator-dev"]
+]
+dev-repo: "git+https://code.qt.io/qt-creator/qt-creator.git"
+depexts: [
+  ["ubuntu"]
+  [
+    "libqt5webkit5-dev"
+    "libqt5x11extras5-dev"
+    "qtbase5-private-dev"
+    "qtdeclarative5-private-dev"
+    "qtscript5-dev"
+    "qtscript5-private-dev"
+    "qttools5-dev"
+    "qttools5-private-dev"
+    "qtxmlpatterns5-dev-tools"
+  ]
+]
