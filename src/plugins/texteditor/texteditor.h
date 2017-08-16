@@ -437,8 +437,8 @@ public:
     void undo();
     void redo();
 
-    void openLinkUnderCursor();
-    void openLinkUnderCursorInNextSplit();
+    virtual void openLinkUnderCursor();
+    virtual void openLinkUnderCursorInNextSplit();
 
     /// Abort code assistant if it is running.
     void abortAssist();
