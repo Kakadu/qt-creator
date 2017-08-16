@@ -449,8 +449,8 @@ public:
     void undo();
     void redo();
 
-    void openLinkUnderCursor();
-    void openLinkUnderCursorInNextSplit();
+    virtual void openLinkUnderCursor();
+    virtual void openLinkUnderCursorInNextSplit();
 
     virtual void findUsages();
 
