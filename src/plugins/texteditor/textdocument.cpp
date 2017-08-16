@@ -662,6 +662,8 @@ Core::IDocument::OpenResult TextDocument::openImpl(QString *errorString, const Q
         if (!reload || fileName == realFileName)
             d->m_document.setUndoRedoEnabled(reload);
 
+        setFilePath(Utils::FileName::fromUserInput(fi.absoluteFilePath()));
+
         QTextCursor c(&d->m_document);
         c.beginEditBlock();
         if (reload) {
