@@ -24,15 +24,15 @@ mac {
     SUBDIRS += iostool
 }
 
-SUBDIRS += clangbackend
+#SUBDIRS += clangbackend
 
-QTC_ENABLE_CLANG_LIBTOOLING=$$(QTC_ENABLE_CLANG_LIBTOOLING)
-!isEmpty(QTC_ENABLE_CLANG_LIBTOOLING) {
-    SUBDIRS += clangrefactoringbackend
-    SUBDIRS += clangpchmanagerbackend
-} else {
-    warning("Not building the clang refactoring backend and the pch manager backend.")
-}
+#QTC_ENABLE_CLANG_LIBTOOLING=$$(QTC_ENABLE_CLANG_LIBTOOLING)
+#!isEmpty(QTC_ENABLE_CLANG_LIBTOOLING) {
+#    SUBDIRS += clangrefactoringbackend
+#    SUBDIRS += clangpchmanagerbackend
+#} else {
+#    warning("Not building the clang refactoring backend and the pch manager backend.")
+#}
 
 isEmpty(BUILD_CPLUSPLUS_TOOLS):BUILD_CPLUSPLUS_TOOLS=$$(BUILD_CPLUSPLUS_TOOLS)
 !isEmpty(BUILD_CPLUSPLUS_TOOLS) {
