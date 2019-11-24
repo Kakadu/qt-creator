@@ -5,7 +5,6 @@ TEMPLATE  = subdirs
 SUBDIRS   = \
     autotest \
     clangformat \
-    clangtools \
     coreplugin \
     texteditor \
     cppeditor \
