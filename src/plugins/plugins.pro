@@ -3,7 +3,6 @@ include(../../qtcreator.pri)
 TEMPLATE  = subdirs
 
 SUBDIRS   = \
-    autotest \
     clangformat \
     coreplugin \
     texteditor \
@@ -13,33 +12,23 @@ SUBDIRS   = \
     bookmarks \
     projectexplorer \
     vcsbase \
-    git \
     cpptools \
     qtsupport \
     qmakeprojectmanager \
     debugger \
-    cpaster \
     cmakeprojectmanager \
     fakevim \
     resourceeditor \
     genericprojectmanager \
     qmljseditor \
     qmlprojectmanager \
-    glsleditor \
     classview \
     tasklist \
     qmljstools \
     macros \
-    remotelinux \
-    android \
     valgrind \
     todo \
-    qnx \
-    baremetal \
     beautifier \
-    modeleditor \
-    updateinfo \
-    scxmleditor \
     welcome \
     silversearcher \
     languageclient \
