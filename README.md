@@ -2,6 +2,12 @@
 
 Qt Creator is a cross-platform IDE for development with the Qt framework.
 
+### OCamler's note 
+
+   QTC_DO_NOT_BUILD_QMLDESIGNER=1 qmake  ../qtcreator-src/qtcreator.pro -recursive -spec linux-g++ CONFIG+=debug
+
+   sduo apt install libclang-8-dev
+
 ## Supported Platforms
 
 The standalone binary packages support the following platforms:
