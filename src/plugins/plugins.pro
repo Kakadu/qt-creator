@@ -3,7 +3,6 @@ include(../../qtcreator.pri)
 TEMPLATE  = subdirs
 
 SUBDIRS   = \
-    autotest \
     clangformat \
     coreplugin \
     texteditor \
@@ -12,8 +11,6 @@ SUBDIRS   = \
     imageviewer \
     bookmarks \
     projectexplorer \
-    vcsbase \
-    git \
     cpptools \
     qtsupport \
     qmakeprojectmanager \
@@ -30,36 +27,22 @@ SUBDIRS   = \
     tasklist \
     qmljstools \
     macros \
-    remotelinux \
-    android \
-    valgrind \
     todo \
-    qnx \
-    baremetal \
-    beautifier \
-    modeleditor \
-    updateinfo \
-    scxmleditor \
     welcome \
-    silversearcher \
     languageclient \
-    cppcheck \
     compilationdatabaseprojectmanager \
     qmlpreview \
     studiowelcome \
-    webassembly \
     mcusupport \
-    marketplace \
-    incredibuild
 
 qtHaveModule(serialport) {
-    SUBDIRS += serialterminal
+    SUBDIRS += 
 } else {
     warning("SerialTerminal plugin has been disabled since the Qt SerialPort module is not available.")
 }
 
 qtHaveModule(quick) {
-    SUBDIRS += qmlprofiler perfprofiler ctfvisualizer
+    SUBDIRS += 
 } else {
     warning("QmlProfiler, PerfProfiler and CTF Visualizer plugins have been disabled since the Qt Quick module is not available.")
 }
@@ -71,7 +54,7 @@ qtHaveModule(help) {
 }
 
 qtHaveModule(designercomponents_private) {
-    SUBDIRS += designer
+    SUBDIRS += #designer
 } else {
     warning("Qt Widget Designer plugin has been disabled since the Qt Designer module is not available.")
 }
@@ -108,7 +91,7 @@ QTC_ENABLE_CLANG_REFACTORING=$$(QTC_ENABLE_CLANG_REFACTORING)
 
 isEmpty(IDE_PACKAGE_MODE) {
     SUBDIRS += \
-        helloworld
+        #helloworld
 }
 
 for(p, SUBDIRS) {
