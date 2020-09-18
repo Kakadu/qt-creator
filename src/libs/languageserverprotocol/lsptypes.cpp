@@ -188,6 +188,7 @@ static QHash<Utils::MimeType, QString> mimeTypeLanguageIdMap()
         {"text/x-c++hdr", "cpp"},
         {"text/x-c++src", "cpp"},
         {"text/x-moc", "cpp"},
+        {"text/x-ocaml", "ocaml"},
         {"text/x-csharp", "csharp"},
         {"text/vnd.qtcreator.git.commit", "git-commit"},
         {"text/vnd.qtcreator.git.rebase", "git-rebase"},
